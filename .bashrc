@@ -13,7 +13,6 @@ bind "set completion-ignore-case on"
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
-
 # Set environment variables
 export TERM="xterm-256color" 
 export EDITOR="nvim"
@@ -58,13 +57,12 @@ alias mv='mv -iv'
 alias cp='cp -iv'
 alias mkdir='mkdir -pv'
 alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias sd="cd ~ && cd \$(find * -type d | fzf)"
 alias nf='neofetch'
 alias cc='clear'
 alias df='df -h'
 alias cat='bat'
 alias free='free -m' # show sizes in MB
-alias x='sxiv -t *'
-alias nb='newsboat'
 alias z='zathura'
 alias ansibleupdate='just setup-all -K --ask-become-pass --ask-vault-pass'
 
@@ -75,10 +73,8 @@ alias lt='eza --tree --level=2 --icons'
 alias ls='eza --grid --color auto --icons --sort=type'
 
 # More Random Alias
-alias speed='speedtest-cli'
 alias conf='cd ~/.config'
 alias yt="yt-dlp"
-alias mp4='find . -name "*.webm" -exec ffmpeg -i {} -qscale 0 {}.mp4 \;'
 
 # Change directory aliases
 alias home='cd ~'
