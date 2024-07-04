@@ -13,4 +13,5 @@ no_actions=true
 orientation=vertical
 halign=fill
 content_halign=fill
-
+key_up=Ctrl-p
+key_down=Ctrl-n

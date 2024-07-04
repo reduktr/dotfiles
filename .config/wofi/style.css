@@ -3,9 +3,8 @@
 }
 
 window {
-  margin: 1px;
-  border: 1px solid 
-  border-radius: 15px 15px 15px 15px;
+ # margin: 1px;
+ # border: 1px solid 
 }
 
 #input {
