@@ -66,6 +66,7 @@ window#waybar.empty #window {
 
 #mpris {
   padding: 0 6px;
+  background-color: #253526;
   font-weight: normal;
 }
 
