@@ -75,6 +75,12 @@ alias la='eza --grid --all --color auto --icons --sort=type'
 alias lt='eza --tree --level=2 --icons'
 alias ls='eza --grid --color auto --icons --sort=type'
 
+# YADM Alias
+alias y='yadm'
+alias ya='yadm add'
+alias ys='yadm status'
+alias yd='yadm diff'
+
 # Tmux Alias
 alias tm='tmux'
 alias tma='tmux attach-session'
