@@ -23,6 +23,7 @@ export BROWSER="firefox"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export BAT_THEME="base16-256"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # XDG Vars
 export XDG_LOCAL_HOME="${HOME}/.local"
@@ -59,12 +60,14 @@ alias mkdir='mkdir -pv'
 alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
 alias sd="cd ~ && cd \$(find * -type d | fzf)"
 alias nf='neofetch'
+alias ff='fastfetch'
 alias cc='clear'
 alias df='df -h'
 alias cat='bat'
 alias free='free -m' # show sizes in MB
 alias z='zathura'
 alias ansibleupdate='just setup-all -K --ask-become-pass --ask-vault-pass'
+alias conf='cd ~/.config'
 
 # Eza Alias
 alias ll='eza --all --long --color=auto --icons --group-directories-first'
@@ -72,9 +75,15 @@ alias la='eza --grid --all --color auto --icons --sort=type'
 alias lt='eza --tree --level=2 --icons'
 alias ls='eza --grid --color auto --icons --sort=type'
 
-# More Random Alias
-alias conf='cd ~/.config'
-alias yt="yt-dlp"
+# Tmux Alias
+alias tm='tmux'
+alias tma='tmux attach-session'
+alias tmat='tmux attach-session -t'
+alias tmks='tmux kill-session -a'
+alias tml='tmux list-sessions'
+alias tmn='tmux new-session'
+alias tmns='tmux new -s'
+alias tms='tmux new-session -s'
 
 # Change directory aliases
 alias home='cd ~'
