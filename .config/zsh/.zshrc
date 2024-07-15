@@ -1,12 +1,8 @@
-# Dependencies You Need for this Config
-# zsh-syntax-highlighting - syntax highlighting for ZSH in standard repos
-# zsh-autosuggestions - Suggestions based on your history
 
 # Navigation
 setopt AUTO_CD              # Go to folder path without using cd. setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
-#setopt CORRECT              # Spelling correction
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 
@@ -54,6 +50,45 @@ neofetch
 
 # Load ; should be last.
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#606090'
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+ZSH_HIGHLIGHT_MAXLENGTH=120
+
+# Rainbow brackets in special order, easier for eyes
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=green'
+ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=yellow'
+ZSH_HIGHLIGHT_STYLES[bracket-level-5]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[bracket-level-6]='fg=red'
+
+# Custom styles
+# Errors
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,underline'
+
+# Keywords
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=blue'
+
+# Commands
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[global-alias]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=magenta'
+
+# Strings
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=green'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=green'
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=yellow'
+
+# Redirections
+ZSH_HIGHLIGHT_STYLES[redirection]='fg=cyan'
+
+# Paths
+ZSH_HIGHLIGHT_STYLES[path]='none'
 
