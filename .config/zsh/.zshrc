@@ -1,3 +1,10 @@
+# Starship
+eval "$(starship init zsh)"
+
+
+# Neofetch on Start
+neofetch
+
 
 # Navigation
 setopt AUTO_CD              # Go to folder path without using cd. setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
@@ -21,32 +28,47 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 
 # Basic auto/tab complete:
 autoload -U compinit
-zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)               # Include hidden files.
 
+# _complete is base completer
+# _approximate will fix completion if there is no matches
+# _extensions will complete glob patters with extensions
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' menu select  # menu with selection
+zstyle ':completion:*' increment yes
+zstyle ':completion:*' squeeze-slashes yes  # replace // with /
+zstyle ':completion:*' file-sort modification  # show recently used files first
+zstyle ':completion:*' list-dirs-first yes
 zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # colored files and directories, blue selection box
+zstyle ':completion:*' ignored-patterns '.git'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' rehash false  # improves performance
+zstyle ':completion:*' use-cache true
+eval "$(fzf --zsh)"
+export FZF_COMPLETION_TRIGGER=''
+bindkey '^T' fzf-completion
+bindkey '^I' $fzf_default_completion
 
-# Vi mode
-bindkey -v
+# Emacs mode //Better Keybindings than Vi mode. (Even for a vim user)
+
+bindkey -e
 export KEYTIMEOUT=1
 
 
 # Custom ZSH Binds
-bindkey '^E' autosuggest-execute
-# delete whole word with ctrl + backspace
-bindkey ^H backward-delete-word
+bindkey '^I' complete-word  # Tab, complete instead of expand-and-complete
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'l' vi-forward-charindkey '^[[3~' delete-char  # Delete
+
 
 # Load aliases and shortcuts if existent.
 [ -f "$ZDOTDIR/aliases" ] && source "$ZDOTDIR/aliases"
 
-# Starship
-eval "$(starship init zsh)"
-
-# Neofetch on Start
-neofetch
 
 # Load ; should be last.
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null

@@ -15,7 +15,7 @@
 
 .modules-right > * > * {
   padding: 0px 12px;
-  font-weight: normal;
+  font-weight: bold;
   background-color: #1D2433;
   margin-left: 8px
 }
@@ -50,7 +50,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-  font-weight: 400;
+  font-weight: bold;
   padding: 0 5px;
   background: none;
   border: none;
@@ -67,12 +67,12 @@ window#waybar.empty #window {
 
 #mpris {
   padding: 0 6px;
-  background-color: #253526;
-  font-weight: normal;
+  background-color: #313847;
+  font-weight: bold;
 }
 
 #mpris.spotifyd, #mpris.spotify {
-  background-color: #253526;
+  background-color: #313847;
   /* color: #fff; */
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
