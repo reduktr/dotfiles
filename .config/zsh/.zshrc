@@ -6,7 +6,7 @@
 setopt AUTO_CD              # Go to folder path without using cd. setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
 setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
-setopt CORRECT              # Spelling correction
+#setopt CORRECT              # Spelling correction
 setopt CDABLE_VARS          # Change directory to a path stored in a variable.
 setopt EXTENDED_GLOB        # Use extended globbing syntax.
 
@@ -30,6 +30,8 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)               # Include hidden files.
 
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Vi mode
 bindkey -v
@@ -37,12 +39,18 @@ export KEYTIMEOUT=1
 
 
 # Custom ZSH Binds
-bindkey '^ ' autosuggest-execute
+bindkey '^E' autosuggest-execute
+# delete whole word with ctrl + backspace
+bindkey ^H backward-delete-word
+
 # Load aliases and shortcuts if existent.
 [ -f "$ZDOTDIR/aliases" ] && source "$ZDOTDIR/aliases"
 
 # Starship
 eval "$(starship init zsh)"
+
+# Neofetch on Start
+neofetch
 
 # Load ; should be last.
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
