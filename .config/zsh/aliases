@@ -6,6 +6,7 @@ alias mv='mv -iv'
 alias cp='cp -iv'
 alias mkdir='mkdir -pv'
 alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias vim='nvim'
 alias sd="cd ~ && cd \$(find * -type d | fzf)"
 alias nf='neofetch'
 alias cc='clear'
