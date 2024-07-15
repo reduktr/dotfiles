@@ -1,20 +1,22 @@
-font=Fira Sans Regular
-border-radius=2
-padding=10
-width=400
-background-color=#181818DD
-text-color=#ebdbb2
-border-color=#83a598
-border-size=1
-margin=3
+font=JetBrains Mono 12
 
-default-timeout=5000
+max-history=0
 ignore-timeout=1
+default-timeout=5000
+max-visible=-1
 
-[urgency=low]
-border-color=#689d6a
+width=450
+height=200
+border-radius=24
+outer-margin=0
+margin=12
+padding=24
+format=%s\n%b
 
-[urgency=high]
-border-color=#fb4934
+background-color=#1d2433
+text-color=#bdd9f2
 
+# Imitate shadow
+border-color=#00000040
+border-size=1
 

@@ -1,44 +1,37 @@
 * {
-  font-family: monospace;
+  background: none;
+  color: #BDD9F2;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font: JetBrainsMono ;
+  font-size: 16px;
 }
 
-window {
- # margin: 1px;
- # border: 1px solid 
+#window {
+  background: rgba(29, 36, 51, 0.75);  /* bg with opacity */
 }
 
 #input {
-  margin: 0px;
-  border-radius: 0px;
-  border: none;
-  border-bottom: 0px solid black;
-  background-color: #161616;
-  color: #ff7eb6;
+  padding: 24px;
 }
 
-#inner-box {
-  margin: 5px;
-  background-color: #161616;
+#input * {
+  color: transparent;
 }
 
 #outer-box {
-  margin: 2px;
-  padding: 20px;
-  background-color: #161616;
-  border-radius: 15px 15px 15px 15px;
+  margin: 24px;
 }
 
-#text {
-  margin: 5px;
-  color: #f2f4f8;
+#inner-box {
+  margin-left: 48px;
 }
 
-#entry:selected {
-  background-color: #282828;
+#entry {
+  padding: 6px;
 }
 
-#text:selected {
-  color: #ff7eb6;
+#entry:selected * {
+  color: #9BB8F2;
 }
-
-

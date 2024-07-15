@@ -16,7 +16,7 @@
 .modules-right > * > * {
   padding: 0px 12px;
   font-weight: normal;
-  background-color: #191919;
+  background-color: #1D2433;
   margin-left: 8px
 }
 
@@ -29,18 +29,18 @@
 }
 
 window#waybar {
-  background-color: #090909;
+  background-color: #1D2433;
   color: #dcdcdc;
   font-weight: bold;
-  border: solid 10px #090909;
+  border: solid 10px #1d2433;
 }
 
 .modules-left {
-  background-color: #191919;
+  background-color: #1d2433;
 }
 
 #window {
-  background-color: #191919;
+  background-color: #1D2433;
   border-radius: 12px;
   padding: 0px 12px;
 }
@@ -55,13 +55,14 @@ window#waybar.empty #window {
   background: none;
   border: none;
   border-radius: 1000px;
-  border: solid 2px #191919;
+  color: #9bb8f2;
+  border: solid 2px #1D2433;
 }
 
 #workspaces button.focused, #workspaces button.active {
-  background-color: #191919;
+  background-color: #1D2433;
   color: #fff;
-  border: solid 2px #458588;
+  border: solid 2px #BBAAF2;
 }
 
 #mpris {
