@@ -58,6 +58,25 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
 export FZF_COMPLETION_DIR_COMMANDS="cd pushd rmdir tree ls"
 
 
+# Settings: LS_COLORS
+LS_COLORS='no=0:fi=0:di=34'
+
+# Hidden files
+LS_COLORS+=":.*=90"
+
+# Programming (purple)
+LS_COLORS+=":*.py=36:*.sh=36"
+LS_COLORS+=":*Dockerfile=36:*Makefile=36"
+
+# Text files (green)
+LS_COLORS+=":*.md=32:*.txt=32:*.html=32"
+
+# Config files (yellow)
+LS_COLORS+=":*.json=33:*.toml=33:*.yml=33"
+LS_COLORS+=":*.in=33:*.conf=33:*.example=33"
+LS_COLORS+=":.zshrc=33:.zprofile=33"
+export LS_COLORS
+
 
 # Disable Home Dir Clutter
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
