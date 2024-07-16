@@ -33,6 +33,8 @@ export SAVEHIST=5000                   # Maximum events in history file
 # fzf
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
+export FZF_COMPLETION_DIR_COMMANDS="cd pushd rmdir tree ls"
 
 FZF_COLORS="bg+:-1,\
 fg:gray,\
@@ -54,8 +56,6 @@ export FZF_DEFAULT_OPTS="--height 60% \
 --prompt '∷ ' \
 --pointer ▶ \
 --marker ⇒"
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
-export FZF_COMPLETION_DIR_COMMANDS="cd pushd rmdir tree ls"
 
 
 # Settings: LS_COLORS
