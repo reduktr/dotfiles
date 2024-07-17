@@ -47,6 +47,7 @@ zstyle ':completion:*' ignored-patterns '.git'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' rehash false  # improves performance
 zstyle ':completion:*' use-cache true
+
 eval "$(fzf --zsh)"
 export FZF_COMPLETION_TRIGGER=''
 bindkey '^T' fzf-completion
