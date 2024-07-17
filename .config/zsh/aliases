@@ -15,6 +15,7 @@ alias cat='bat'
 alias free='free -m' # show sizes in MB
 alias z='zathura'
 alias ansibleupdate='just setup-all -K --ask-become-pass --ask-vault-pass'
+alias fpu= 'flatpak update'
 
 # Eza Alias
 alias ll='eza --all --long --color=auto --icons --group-directories-first'
