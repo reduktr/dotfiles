@@ -16,7 +16,7 @@
 .modules-right > * > * {
   padding: 0px 12px;
   font-weight: bold;
-  background-color: #1D2433;
+  background-color: #323437;
   margin-left: 8px
 }
 
@@ -29,18 +29,18 @@
 }
 
 window#waybar {
-  background-color: #1D2433;
+  background-color: #080808;
   color: #dcdcdc;
   font-weight: bold;
-  border: solid 10px #1d2433;
+  border: solid 10px #080808;
 }
 
 .modules-left {
-  background-color: #1d2433;
+  background-color: #323437;
 }
 
 #window {
-  background-color: #1D2433;
+  background-color: #323437;
   border-radius: 12px;
   padding: 0px 12px;
 }
@@ -56,26 +56,27 @@ window#waybar.empty #window {
   border: none;
   border-radius: 1000px;
   color: #9bb8f2;
-  border: solid 2px #1D2433;
+  border: solid 2px #323437;
 }
 
 #workspaces button.focused, #workspaces button.active {
-  background-color: #1D2433;
+  background-color: #323437;
   color: #fff;
-  border: solid 2px #BBAAF2;
+  border: solid 2px #80a0ff;
 }
 
 #mpris {
   padding: 0 6px;
-  background-color: #313847;
+  background-color: #80a0ff;
   font-weight: bold;
 }
 
 #mpris.spotifyd, #mpris.spotify {
-  background-color: #313847;
+  background-color: #80a0ff;
   /* color: #fff; */
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   padding: 0px 12px;
 }
+
 

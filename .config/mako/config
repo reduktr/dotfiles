@@ -1,22 +1,21 @@
-font=JetBrains Mono 12
+font=JetBrainsMono Nerd Font 12
+background-color=#080808B0
+text-color=#EEEEEE
+outer-margin=2
+width=500
+height=300
+border-size=2
+border-color=#80A0FF
+border-radius=12
+progress-color=source #8CC85F
+icon-path=/usr/share/icons/Papirus-Dark
+default-timeout=10000
 
-max-history=0
-ignore-timeout=1
-default-timeout=5000
-max-visible=-1
+[urgency=low]
+border-color=#8CC85F
 
-width=450
-height=200
-border-radius=24
-outer-margin=0
-margin=12
-padding=24
-format=%s\n%b
+[urgency=critical]
+border-color=#FF5454
 
-background-color=#1d2433
-text-color=#bdd9f2
-
-# Imitate shadow
-border-color=#00000040
-border-size=1
-
+[mode=dnd]
+invisible=1
