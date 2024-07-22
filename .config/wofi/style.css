@@ -49,7 +49,7 @@ color: #c6c6c6;
 #entry:selected {
 	background-color: #80a0ff;
 	font-weight: normal;
-	border-radius: 25px;
+	border-radius: 0px;
 }
 
 #text:selected {
