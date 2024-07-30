@@ -16,6 +16,7 @@ alias free='free -m' # show sizes in MB
 alias z='zathura'
 alias ansibleupdate='just setup-all -K --ask-become-pass --ask-vault-pass'
 alias fpu='flatpak update'
+alias listinstalled='expac -H M '%-20n\t%10d' $(pacman -Qe)'
 
 # Eza Alias
 alias ll='eza --all --long --color=auto --icons --group-directories-first'
@@ -25,7 +26,7 @@ alias ls='eza --grid --color auto --icons --sort=type'
 
 # More Random Alias
 alias conf='cd ~/.config'
-alias yt="yt-dlp"
+alias yt='yt-dlp'
 
 # Change directory aliases
 alias home='cd ~'
