@@ -51,7 +51,7 @@ window#waybar.empty #window {
 
 #workspaces button {
   font-weight: bold;
-  padding: 0 5px;
+  padding: 2 5px;
   background: none;
   border: none;
   border-radius: 1000px;
@@ -66,13 +66,13 @@ window#waybar.empty #window {
 }
 
 #mpris {
-  padding: 1 6px;
-  background-color: #334066;
+  padding: 2 6px;
+  background-color: #26304c;
   font-weight: bold;
 }
 
 #mpris.spotifyd, #mpris.spotify {
-  background-color: #334066;
+  background-color: #26304c;
   /* color: #fff; */
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
