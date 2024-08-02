@@ -22,6 +22,13 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
+# Disable Home Dir Clutter
+export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
+export CARGO_HOME="${XDG_DATA_HOME}/cargo"
+export ANSIBLE_HOME="${XDG_DATA_HOME}/ansible"
+export WGETRC="${XDG_CONFIG_HOME}/wget/wgetrc"
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
@@ -76,15 +83,6 @@ LS_COLORS+=":*.json=33:*.toml=33:*.yml=33"
 LS_COLORS+=":*.in=33:*.conf=33:*.example=33"
 LS_COLORS+=":.zshrc=33:.zprofile=33"
 export LS_COLORS
-
-
-# Disable Home Dir Clutter
-export CUDA_CACHE_PATH="${XDG_CACHE_HOME}/nv"
-export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
-export CARGO_HOME="${XDG_DATA_HOME}/cargo"
-export ANSIBLE_HOME="${XDG_DATA_HOME}/ansible"
-export WGETRC="${XDG_CONFIG_HOME}/wget/wgetrc"
-export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 
 
 # Path
