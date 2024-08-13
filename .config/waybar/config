@@ -5,7 +5,7 @@
     "modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "memory", "cpu", "temperature","clock", "tray"],
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
 
     "hyprland/workspaces": {
       "format": "{icon}",
